@@ -7,10 +7,9 @@ module.exports = function(app){
     var root = require('../routes/index');
     app.use('/', root);
 
-    var employee = require('../routes/employee');
-    app.use('/employees', employee);
 
-
+    //hook up app to it so we could unit test it by hopping from outside
+    require('../routes/employee')(app);
 
     // catch 404 and forward to error handler
     app.use(function (req, res, next) {

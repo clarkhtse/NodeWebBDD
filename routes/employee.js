@@ -1,26 +1,29 @@
 var express = require('express');
-var router = express.Router();
 var employee = require("../controllers/employee.js");
 
-// Get all employees
-router.get('/', employee.list);
+module.exports = function(app){
+    var router = express.Router();
 
-// Get single employee by id
-router.get('/show/:id', employee.show);
+    // Get all employees
+    router.get('/', employee.list);
 
-// Create employee
-router.get('/create', employee.create);
+    // Get single employee by id
+    router.get('/show/:id', employee.show);
 
-// Save employee
-router.post('/save', employee.save);
+    // Create employee
+    router.get('/create', employee.create);
 
-// Edit employee
-router.get('/edit/:id', employee.edit);
+    // Save employee
+    router.post('/save', employee.save);
 
-// Edit update
-router.post('/update/:id', employee.update);
+    // Edit employee
+    router.get('/edit/:id', employee.edit);
 
-// Edit update
-router.post('/delete/:id', employee.delete);
+    // Edit update
+    router.post('/update/:id', employee.update);
 
-module.exports = router;
+    // Edit update
+    router.post('/delete/:id', employee.delete);
+
+    app.use('/employees', router);
+};

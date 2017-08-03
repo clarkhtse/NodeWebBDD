@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-var Employee = require("../models").Staff;
+var Employee = require("../models/staff");
 
 var employeeController = {};
 
@@ -8,6 +8,8 @@ employeeController.list = function(req, res) {
   Employee.find({}).exec(function (err, employees) {
     if (err) {
       console.log("Error:", err);
+      req.flash('error', err);
+      return res.redirect('/employees');
     }
     else {
       res.render("employees/index", {employees: employees});

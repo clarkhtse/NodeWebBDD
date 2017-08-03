@@ -1,8 +1,8 @@
-var supertest = require('supertest')(require('../../app'));
+var supertest = require('supertest')(require('../app'));
 var expect = require('chai').expect;
 var cheerio = require('cheerio');
 
-describe('INTEGRATION TEST', function () {
+describe('SMOKE', function () {
     describe('loading express', function () {
 
         it('responds to /', function test(done) {

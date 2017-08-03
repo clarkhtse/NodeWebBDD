@@ -1,0 +1,73 @@
+[
+  {
+    "keyword": "Feature",
+    "line": 1,
+    "name": "Employees",
+    "tags": [],
+    "uri": "/Users/tuo/Desktop/automate_test_workshop/NodeWebBDD/tests/e2e/employee.feature",
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Employee List",
+        "tags": [],
+        "id": "employees;employee-list",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "I open Employee List page",
+            "result": {
+              "status": "passed",
+              "duration": 4293
+            },
+            "line": 5,
+            "match": {
+              "location": "/Users/tuo/Desktop/automate_test_workshop/NodeWebBDD/tests/e2e/step_definitions/step.js:14"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "the title is \"Employee List\"",
+            "result": {
+              "status": "passed",
+              "duration": 10
+            },
+            "line": 6,
+            "match": {
+              "location": "/Users/tuo/Desktop/automate_test_workshop/NodeWebBDD/tests/e2e/step_definitions/step.js:18"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "the Google search form exists",
+            "result": {
+              "status": "failed",
+              "duration": 1453,
+              "error_message": "Testing if element <input[name=\"q\"]> is visible. Element could not be located. - Expected \"true\" but got: \"null\"\n    at World.<anonymous> (/Users/tuo/Desktop/automate_test_workshop/NodeWebBDD/tests/e2e/step_definitions/step.js:23:30)"
+            },
+            "line": 7,
+            "match": {
+              "location": "/Users/tuo/Desktop/automate_test_workshop/NodeWebBDD/tests/e2e/step_definitions/step.js:22"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "I type keyword Cucumber.js and click search",
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "match": {
+              "location": "/Users/tuo/Desktop/automate_test_workshop/NodeWebBDD/tests/e2e/step_definitions/step.js:26"
+            }
+          }
+        ]
+      }
+    ],
+    "id": "employees"
+  }
+]

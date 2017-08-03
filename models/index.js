@@ -2,6 +2,6 @@
 
 var models = {};
 
-models.User     = require('./user');
+models.Employee     = require('./employee');
 
 module.exports  = models;

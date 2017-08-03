@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-var Employee = require("../models").User;
+var Employee = require("../models").Employee;
 
 var employeeController = {};
 

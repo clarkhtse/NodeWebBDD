@@ -19,7 +19,7 @@
             "name": "I open Employee List page",
             "result": {
               "status": "passed",
-              "duration": 4293
+              "duration": 2843
             },
             "line": 5,
             "match": {
@@ -45,7 +45,7 @@
             "name": "the Google search form exists",
             "result": {
               "status": "failed",
-              "duration": 1453,
+              "duration": 1350,
               "error_message": "Testing if element <input[name=\"q\"]> is visible. Element could not be located. - Expected \"true\" but got: \"null\"\n    at World.<anonymous> (/Users/tuo/Desktop/automate_test_workshop/NodeWebBDD/tests/e2e/step_definitions/step.js:23:30)"
             },
             "line": 7,

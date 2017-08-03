@@ -4,7 +4,7 @@ var proxyquire = require('proxyquire');
 var sinon = require('sinon');
 require('sinon-mongoose');
 var mongoose = require('mongoose');
-
+var Staff = require('../../../models/staff')
 // Supertest allows us to make requests against an express object
 var supertest = require('supertest');
 // Natural language-like assertions
@@ -23,7 +23,7 @@ describe('CONTROLLER', function () {
 
             it('should list with no error', function test(done) {
                 var result = [{"_id": 1}];
-                var Staff = mongoose.model('Staff')
+                //var Staff = mongoose.model('Staff')
                 var StaffMock = sinon.mock(Staff)
 
                 StaffMock

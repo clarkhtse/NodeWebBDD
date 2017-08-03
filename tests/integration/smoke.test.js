@@ -1,4 +1,4 @@
-var supertest = require('supertest')(require('../app'));
+var supertest = require('supertest')(require('../../app'));
 var expect = require('chai').expect;
 var cheerio = require('cheerio');
 

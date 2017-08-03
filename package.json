@@ -14,5 +14,11 @@
     "mongoose": "^4.8.4",
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.2"
+  },
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "cheerio": "^1.0.0-rc.2",
+    "mocha": "^3.5.0",
+    "supertest": "^3.0.0"
   }
 }

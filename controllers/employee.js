@@ -36,13 +36,13 @@ employeeController.create = function(req, res) {
 // Save new employee
 employeeController.save = function(req, res) {
   var employee = new Employee(req.body);
-
+    //console.log("create employee.", req.body);
   employee.save(function(err) {
     if(err) {
-      console.log(err);
-      res.render("employees/create");
+      //console.log(err);
+      res.status(500).render("employees/create");
     } else {
-      console.log("Successfully created an employee.");
+      //console.log("Successfully created an employee.");
       res.redirect("/employees/show/"+employee._id);
     }
   });

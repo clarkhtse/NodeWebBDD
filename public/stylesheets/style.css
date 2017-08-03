@@ -1,5 +1,5 @@
 body {
-  padding: 30px;
+
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   color: #555555;
 }
@@ -9,23 +9,21 @@ a {
 }
 
 .container {
-  padding: 20px;
-  background-color: #efefef;
-  width: 400px;
-  border-radius: 6px;
-}
-.container h3 a {
-  text-decoration: none;
-  padding: 10px 20px;
-  background-color: #00AE4D;
-  border-radius: 6px;
-  color: #FFFFFF;
-}
 
-.container h3 a:hover, .container table tr td button:hover {
-  background-color: #78F5AE;
-  color: #999999;
+  border-radius: 6px;
 }
+/*.container h3 a {*/
+  /*text-decoration: none;*/
+  /*padding: 10px 20px;*/
+  /*background-color: #00AE4D;*/
+  /*border-radius: 6px;*/
+  /*color: #FFFFFF;*/
+/*}*/
+
+/*.container h3 a:hover, .container table tr td button:hover {*/
+  /*background-color: #78F5AE;*/
+  /*color: #999999;*/
+/*}*/
 
 .container table {
   width: 360px;

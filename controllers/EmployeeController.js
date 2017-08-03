@@ -29,7 +29,7 @@ employeeController.show = function(req, res) {
 
 // Create new employee
 employeeController.create = function(req, res) {
-  res.render("../views/employees/create");
+  res.render("employees/create", {layout:'layout'});
 };
 
 // Save new employee

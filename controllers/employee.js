@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-var Employee = require("../models/Employee");
+var Employee = require("../models/employee");
 
 var employeeController = {};
 
@@ -10,7 +10,7 @@ employeeController.list = function(req, res) {
       console.log("Error:", err);
     }
     else {
-      res.render("../views/employees/index", {employees: employees});
+      res.render("employees/index", {employees: employees});
     }
   });
 };
@@ -22,7 +22,7 @@ employeeController.show = function(req, res) {
       console.log("Error:", err);
     }
     else {
-      res.render("../views/employees/show", {employee: employee});
+      res.render("employees/show", {employee: employee});
     }
   });
 };
@@ -39,7 +39,7 @@ employeeController.save = function(req, res) {
   employee.save(function(err) {
     if(err) {
       console.log(err);
-      res.render("../views/employees/create");
+      res.render("employees/create");
     } else {
       console.log("Successfully created an employee.");
       res.redirect("/employees/show/"+employee._id);
@@ -54,7 +54,7 @@ employeeController.edit = function(req, res) {
       console.log("Error:", err);
     }
     else {
-      res.render("../views/employees/edit", {employee: employee});
+      res.render("employees/edit", {employee: employee});
     }
   });
 };
@@ -64,7 +64,7 @@ employeeController.update = function(req, res) {
   Employee.findByIdAndUpdate(req.params.id, { $set: { name: req.body.name, address: req.body.address, position: req.body.position, salary: req.body.salary }}, { new: true }, function (err, employee) {
     if (err) {
       console.log(err);
-      res.render("../views/employees/edit", {employee: req.body});
+      res.render("employees/edit", {employee: req.body});
     }
     res.redirect("/employees/show/"+employee._id);
   });

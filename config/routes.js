@@ -7,7 +7,7 @@ module.exports = function(app){
     var root = require('../routes/index');
     app.use('/', root);
 
-    var employee = require('../routes/employees');
+    var employee = require('../routes/employee');
     app.use('/employees', employee);
 
 

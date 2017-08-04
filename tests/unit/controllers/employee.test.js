@@ -39,7 +39,7 @@ describe('CONTROLLER', function () {
                     StaffMock.verify();
                     StaffMock.restore();
                     expect(data).to.deep.equal({"employees": result});
-                    expect(view).to.equal("employees/index");
+                    expect(view).to.equal("employees/index1");
                     done()
                 };
                 controller.list({}, res);
